@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce25ad711d46163409fadfd68a3daa2f, type: 3}
+  m_Name: NPC_DialogStage3
+  m_EditorClassIdentifier: 
+  questions:
+  - "Bu d\xFCkkan\u0131 ka\xE7ta a\xE7\u0131yorsun?"
+  - "D\xFCkkan a\xE7\u0131l\u0131\u015F saati normalde ka\xE7?"
+  - "Ekmekler ka\xE7ta \xE7\u0131k\u0131yor?"
+  answer: Saat sabah 05:00
