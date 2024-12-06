@@ -1,3 +1,6 @@
+using System;
+using Unity.Cinemachine;
+using UnityEditor;
 using UnityEngine;
 
 
@@ -11,6 +14,8 @@ public class PlayerMovement : MonoBehaviour
     [Header("Camera Variables")] 
     [SerializeField] private float mouseSensitivity = 3;
     [SerializeField] private float verticalLookMaxValue = 90f;
+    [SerializeField] private GameObject cameraPivot;
+    [SerializeField] private float cameraDamping = 10;
     [Header("Jump Variables")] 
     [SerializeField] private float jumpHeight = 3;
     [SerializeField] private float fallMultiplier = 2.5f;
@@ -22,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
 
 
     private float _xRotation;
+    private float _yRotation;
     private float _defaultSpeed;
     private float _defaultVelocityMaxValue;
     private Vector3 _velocity;
@@ -43,10 +49,15 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        CameraRotation();
+       
         Move();
         Jump();
         Sprint();
+    }
+
+    private void LateUpdate()
+    {
+        CameraRotation();
     }
 
     private void Move()
@@ -82,7 +93,7 @@ public class PlayerMovement : MonoBehaviour
         {
             _velocity.y = jumpHeight;
         }
-        else if (!_characterController.isGrounded)
+        else if (!_characterController.isGrounded || Input.GetKeyUp(KeyCode.Space))
         {
             _velocity.y += Physics.gravity.y * fallMultiplier * Time.deltaTime;
         }
@@ -107,12 +118,14 @@ public class PlayerMovement : MonoBehaviour
 
     private void CameraRotation()
     {
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity;
-
-        _xRotation -= mouseY;
+        _camera.transform.position = Vector3.Lerp(_camera.transform.position,cameraPivot.transform.position,cameraDamping*Time.deltaTime);
+        // _camera.transform.position = cameraPivot.transform.position;
+        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity;         
+        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity;          
+        _xRotation -= mouseY; 
+        _yRotation += mouseX;
         _xRotation = Mathf.Clamp(_xRotation, -verticalLookMaxValue, verticalLookMaxValue);
         transform.rotation = Quaternion.Euler(0f, transform.rotation.eulerAngles.y + mouseX, 0);
-        _camera.transform.localRotation = Quaternion.Euler(_xRotation, 0f, 0f);
+        _camera.transform.localRotation = Quaternion.Euler(_xRotation, _yRotation-180f, 0f);
     }
 }

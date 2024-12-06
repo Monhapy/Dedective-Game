@@ -1,11 +1,12 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 public class NoteSystem : MonoBehaviour
 {
     //Konusma bittigini kontrol etmek icin eklenen bool  
-    public static bool isTalked;
+    public bool isTalked;
     public NoteSO noteSo;
 
     [Header("Current Note & Note Texts")] 
@@ -15,6 +16,8 @@ public class NoteSystem : MonoBehaviour
 
     [Header("Note Objects")] 
     [SerializeField] private GameObject notePanel;
+    [SerializeField] private float duration=2f;
+    [SerializeField] private GameObject notePopup;
     [Header("Keys")] 
     [SerializeField] private KeyCode noteActive = KeyCode.Y;
     [SerializeField] private KeyCode switchNoteLeft = KeyCode.Q;
@@ -71,15 +74,15 @@ public class NoteSystem : MonoBehaviour
         foreach (var noteObject in _noteObjects)
         {
             noteObject.SetActive(false);
-            notePanelInstance.SetActive(true);
         }
-
-        isNoteActive = true;
+        isNoteActive = false;
         NoteActiveFreeze();
+        StartCoroutine(NotePopupController());
     }
     // ReSharper disable Unity.PerformanceAnalysis
     private void SwitchNote()
     {
+        Debug.Log(isNoteActive);
         if (Input.GetKeyDown(switchNoteLeft) && _noteObjects.Count > 1 && currentNote > 0 && isNoteActive)
         {
             currentNote--;
@@ -103,5 +106,12 @@ public class NoteSystem : MonoBehaviour
         }
 
         _noteObjects[currentNote].SetActive(true);
+    }
+    
+    IEnumerator NotePopupController()
+    {
+        notePopup.gameObject.SetActive(true);
+        yield return new WaitForSecondsRealtime(duration);
+        notePopup.gameObject.SetActive(false);
     }
 }
