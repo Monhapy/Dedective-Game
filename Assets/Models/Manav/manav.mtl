@@ -1,0 +1,49 @@
+# Blender 4.3.1 MTL File: 'manavretopo32.blend'
+# www.blender.org
+
+newmtl defaultMat.001
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd textures/defaultMat.001_BaseColor.png
+map_Ns textures/defaultMat.001_Roughness.png
+map_refl textures/defaultMat.001_Metallic.png
+map_Bump -bm 1.000000 textures/defaultMat.001_Normal.png
+
+newmtl hair
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd textures/hair_BaseColor.png
+map_Ns textures/hair_Roughness.png
+map_refl textures/hair_Metallic.png
+map_Bump -bm 1.000000 textures/hair_Normal.png
+
+newmtl lambert2SG
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd textures/Eyeball_Textures_base_blue.png
+map_Ks textures/Eyeball_Textures_specular.png
+map_Bump -bm 1.000000 textures/Eyeball_Textures_normal.png
+
+newmtl manavgovde
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd textures/manavgovde_BaseColor.png
+map_Ns textures/manavgovde_Roughness.png
+map_refl textures/manavgovde_Metallic.png
+map_Bump -bm 1.000000 textures/manavgovde_Normal.png

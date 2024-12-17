@@ -1,0 +1,61 @@
+# Blender 4.3.2 MTL File: 'priest_retopo_6.blend'
+# www.blender.org
+
+newmtl clothes
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd textures/clothes_BaseColor.png
+map_Ns textures/clothes_Roughness.png
+map_refl textures/clothes_Metallic.png
+map_Bump -bm 1.000000 textures/clothes_Normal.png
+
+newmtl clothes2
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd textures/clothes2_BaseColor.png
+map_Ns textures/clothes2_Roughness.png
+map_refl textures/clothes2_Metallic.png
+map_Bump -bm 1.000000 textures/clothes2_Normal.png
+
+newmtl hair
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd textures/hair_BaseColor.png
+map_Ns textures/hair_Roughness.png
+map_refl textures/hair_Metallic.png
+map_Bump -bm 1.000000 textures/hair_Normal.png
+
+newmtl head
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd textures/head_BaseColor.png
+map_Ns textures/head_Roughness.png
+map_refl textures/head_Metallic.png
+map_Bump -bm 1.000000 textures/head_Normal.png
+
+newmtl lambert2SG
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd textures/Eyeball_Textures_base_blue.png
+map_Ks textures/Eyeball_Textures_specular.png
+map_Bump -bm 1.000000 textures/Eyeball_Textures_normal.png
