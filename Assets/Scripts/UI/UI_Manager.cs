@@ -45,23 +45,18 @@ public class UI_Manager : MonoBehaviour
             
             DialogEventManager.RemoveHandler(DialogEvent.OnExitDialog,UnGetQuestionsUI);
             
-            // Devam eden tween'leri öldür
+            // as--s
             DOTween.Kill(fadeInOutImage);
         }
         private void FadeScreen()
         {
-            if (fadeInOutImage == null) return;
-
+            if (fadeInOutImage == null) return; // fadeInOutImage null ise metodu bitir.
+    
             fadeInOutImage.DOFade(1f, fadeDuration).OnComplete(() =>
             {
-                if (fadeInOutImage == null) return;
-
-                // Fazladan kontrol: SetScene sadece bir kez çağrılır.
-                if (DialogEventManager.HasEventHandler(DialogEvent.OnSetScene))
-                {
-                    DialogEventManager.Broadcast(DialogEvent.OnSetScene);
-                }
-
+                if (fadeInOutImage == null) return; // OnComplete tetiklendiğinde fadeInOutImage null olabilir.
+        
+                DialogEventManager.Broadcast(DialogEvent.OnSetScene);
                 fadeInOutImage.DOFade(0f, fadeDuration);
             });
         }
