@@ -15,7 +15,7 @@ public class UI_Manager : MonoBehaviour
     
     [SerializeField] private float answerDisplayDuration;
         
-        
+    private bool isDisplayingFinalAnswer = false;
         private void OnEnable()
         {
             DialogEventManager.AddHandler(DialogEvent.OnInitializedDialog,FadeScreen);
@@ -44,12 +44,24 @@ public class UI_Manager : MonoBehaviour
             DialogEventManager.RemoveHandler(DialogEvent.OnStartAnswerStage,UnGetQuestionsUI);
             
             DialogEventManager.RemoveHandler(DialogEvent.OnExitDialog,UnGetQuestionsUI);
+            
+            // Devam eden tween'leri öldür
+            DOTween.Kill(fadeInOutImage);
         }
         private void FadeScreen()
         {
+            if (fadeInOutImage == null) return;
+
             fadeInOutImage.DOFade(1f, fadeDuration).OnComplete(() =>
             {
-                DialogEventManager.Broadcast(DialogEvent.OnSetScene);
+                if (fadeInOutImage == null) return;
+
+                // Fazladan kontrol: SetScene sadece bir kez çağrılır.
+                if (DialogEventManager.HasEventHandler(DialogEvent.OnSetScene))
+                {
+                    DialogEventManager.Broadcast(DialogEvent.OnSetScene);
+                }
+
                 fadeInOutImage.DOFade(0f, fadeDuration);
             });
         }
@@ -95,6 +107,9 @@ public class UI_Manager : MonoBehaviour
     
         public void QuestionButton()  // Button tarafından kontrol edilecek method
         {
+            // Eğer coroutine zaten çalışıyorsa hiçbir işlem yapma.
+            if (isDisplayingFinalAnswer) return;
+
             if (NPCDialogSystem.CurrentQuestion < NPCDialogSystem.DialogStageList.Count - 1)
             {
                 DialogEventManager.Broadcast(DialogEvent.OnStartAnswerStage);
@@ -102,6 +117,7 @@ public class UI_Manager : MonoBehaviour
             }
             else
             {
+                isDisplayingFinalAnswer = true; // Coroutine'in başladığını işaret et.
                 StartCoroutine(DisplayFinalAnswerAndExit());
             }
             
@@ -122,15 +138,18 @@ public class UI_Manager : MonoBehaviour
         
         private IEnumerator DisplayFinalAnswerAndExit()
         {
-            
             GetAnswerUI();
             UnGetQuestionsUI();
             yield return new WaitForSeconds(answerDisplayDuration);
             UnGetAnswerUI();
+
             fadeInOutImage.DOFade(1f, fadeDuration).OnComplete(() =>
             {
-                DialogEventManager.Broadcast(DialogEvent.OnExitDialog);  
-                fadeInOutImage.DOFade(0f, fadeDuration);
+                DialogEventManager.Broadcast(DialogEvent.OnExitDialog);
+                fadeInOutImage.DOFade(0f, fadeDuration).OnComplete(() =>
+                {
+                    isDisplayingFinalAnswer = false; // Coroutine tamamlandığında bayrağı sıfırla.
+                });
             });
         }
 }

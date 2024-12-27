@@ -26,17 +26,27 @@ public static class DialogEventManager
 
     public static void RemoveHandler(DialogEvent dialogEvent, Action dialogAction)
     {
-        if (EventTable[dialogEvent] != null)
+        if (EventTable.ContainsKey(dialogEvent))
+        {
             EventTable[dialogEvent] -= dialogAction;
-        else
-            EventTable.Remove(dialogEvent);
+            if (EventTable[dialogEvent] == null)
+            {
+                EventTable.Remove(dialogEvent);
+            }
+        }
     }
 
     public static void Broadcast(DialogEvent dialogEvent)
     {
-        if (EventTable[dialogEvent] != null)
+        if (EventTable.ContainsKey(dialogEvent) && EventTable[dialogEvent] != null)
+        {
             EventTable[dialogEvent]();
+        }
 
+    }
+    public static bool HasEventHandler(DialogEvent dialogEvent)
+    {
+        return EventTable.ContainsKey(dialogEvent) && EventTable[dialogEvent] != null;
     }
     
 }
