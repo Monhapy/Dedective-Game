@@ -1,6 +1,3 @@
-using System;
-using Unity.Cinemachine;
-using UnityEditor;
 using UnityEngine;
 
 
@@ -126,6 +123,6 @@ public class PlayerMovement : MonoBehaviour
         _yRotation += mouseX;
         _xRotation = Mathf.Clamp(_xRotation, -verticalLookMaxValue, verticalLookMaxValue);
         transform.rotation = Quaternion.Euler(0f, transform.rotation.eulerAngles.y + mouseX, 0);
-        _camera.transform.localRotation = Quaternion.Euler(_xRotation, _yRotation-180f, 0f);
+        _camera.transform.localRotation = Quaternion.Euler(_xRotation, _yRotation, 0f);
     }
 }

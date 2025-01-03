@@ -55,6 +55,7 @@ public class NoteSystem : MonoBehaviour
     {
         if (isTalked && _noteObjects.Count < noteSo.notes.Length)
         {
+            MapSystem.Instance.GetTalkingNPC(currentNote);
             currentNote = _noteObjects.Count;
             noteText.text = noteSo.notes[_noteObjects.Count];
             currentNoteText.text = (currentNote + 1).ToString();
