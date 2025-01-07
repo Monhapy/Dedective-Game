@@ -12,8 +12,11 @@ public class MapSystem : MonoBehaviour
     [SerializeField] private RectTransform indicatorPrefab;
     [SerializeField] private RawImage mapImage;
     private List<RectTransform> _indicators = new List<RectTransform>();
+    
     private void Awake()
     {
+        gameObject.SetActive(true);
+        gameObject.SetActive(false);
         Instance = this;
         foreach (Transform target in targets)
         {
@@ -40,8 +43,7 @@ public class MapSystem : MonoBehaviour
             Vector3 dir = (targets[i].position - player.position).normalized;
             float angle = Mathf.Atan2(dir.x, dir.z) * Mathf.Rad2Deg;
             _indicators[i].transform.localEulerAngles = new Vector3(0, 0, angle);
-
-
+        
             if (isOnScreen)
             {
                 _indicators[i].DOScale(0.5f, 1);
@@ -51,28 +53,25 @@ public class MapSystem : MonoBehaviour
                     (screenPosition.x - 0.5f) * mapSize.x,
                     (screenPosition.y - 0.5f) * mapSize.y
                 );
-                _indicators[i].anchoredPosition =
-                    Vector3.Lerp(_indicators[i].anchoredPosition, localPosition, Time.deltaTime * 15f);
+                _indicators[i].anchoredPosition = localPosition;
             }
             else
             {
-                _indicators[i].DOScale(.2f, 1);
+                _indicators[i].DOScale(0.2f, 1);
                 _indicators[i].GetComponent<Image>().color = Color.red;
-                Vector2 clampedPosition = new Vector2(
-                    Mathf.Clamp(_indicators[i].anchoredPosition.x, -mapImage.rectTransform.rect.width / 2,
-                        mapImage.rectTransform.rect.width / 2),
-                    Mathf.Clamp(_indicators[i].anchoredPosition.y, -mapImage.rectTransform.rect.height / 2,
-                        mapImage.rectTransform.rect.height / 2));
-                _indicators[i].anchoredPosition = clampedPosition;
+                Vector2 mapSize = mapImage.rectTransform.rect.size;
+                Vector2 localPosition = new Vector2(
+                    Mathf.Clamp(screenPosition.x, 0, 1) * mapSize.x - mapSize.x / 2,
+                    Mathf.Clamp(screenPosition.y, 0, 1) * mapSize.y - mapSize.y / 2
+                );
+                _indicators[i].anchoredPosition = localPosition;
             }
         }
     }
 
     public void GetTalkingNPC(int talkIndex)
     {
-        
         _indicators[talkIndex].gameObject.SetActive(false);
-
     }
     private void MapCameraPosition()
     {

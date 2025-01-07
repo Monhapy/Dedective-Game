@@ -46,7 +46,6 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-       
         Move();
         Jump();
         Sprint();

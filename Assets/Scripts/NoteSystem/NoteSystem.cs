@@ -55,7 +55,6 @@ public class NoteSystem : MonoBehaviour
     {
         if (isTalked && _noteObjects.Count < noteSo.notes.Length)
         {
-            MapSystem.Instance.GetTalkingNPC(currentNote);
             currentNote = _noteObjects.Count;
             noteText.text = noteSo.notes[_noteObjects.Count];
             currentNoteText.text = (currentNote + 1).ToString();
@@ -86,6 +85,7 @@ public class NoteSystem : MonoBehaviour
     {
         noteSprite.gameObject.SetActive(false);
         notePanelInstance = Instantiate(notePanel, notePanel.transform.parent);
+        MapSystem.Instance.GetTalkingNPC(_noteObjects.Count);
         _noteObjects.Add(notePanelInstance);
         foreach (var noteObject in _noteObjects)
         {
