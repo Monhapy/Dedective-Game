@@ -4,23 +4,40 @@ using UnityEngine.UI;
 public class DialogueUI : MonoBehaviour
 {
     [SerializeField] private Text[] questionText;
-    [SerializeField] private Text[] answerButtons;
-    
+    [SerializeField] private Text[] answerText;
+    private int _currentAnswerIndex;
     
     private void OnEnable()
     {
+        Cursor.lockState = CursorLockMode.None;
+        
+        DialogueEvents.Instance.OnQuestionSelected += QuestionSelected;
         DialogueEvents.Instance.OnQuestionAsked += ShowQuestions;
         DialogueEvents.Instance.OnAnswerGiven += ShowAnswers;
     }
     
     private void OnDisable()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        
+        DialogueEvents.Instance.OnQuestionSelected -= QuestionSelected;
         DialogueEvents.Instance.OnQuestionAsked -= ShowQuestions;
         DialogueEvents.Instance.OnAnswerGiven -= ShowAnswers;
     }
     
+ 
     
-    public void ShowQuestions (List<string> questions, CharacterType characterType)
+    private void QuestionSelected(List<string> answer,int answerIndex)
+    {
+        _currentAnswerIndex = answerIndex;
+        foreach (var t in questionText)
+        {
+            t.transform.parent.gameObject.SetActive(false);
+        }
+        answerText[_currentAnswerIndex].text = answer[answerIndex];
+    }
+
+    private void ShowQuestions (List<string> questions, CharacterType characterType)
     {
         for (int i = 0; i < questionText.Length; i++)
         {
@@ -28,12 +45,13 @@ public class DialogueUI : MonoBehaviour
         }
     }
 
-    public void ShowAnswers(List<string> answers, CharacterType characterType)
+    private void ShowAnswers(List<string> answers, CharacterType characterType)
     {
-        foreach (var answer in answers)
+        foreach (var t in answerText)
         {
-            Debug.Log("Answers: " + answer);
+            t.transform.parent.gameObject.SetActive(false);
         }
+        answerText[_currentAnswerIndex].transform.parent.gameObject.SetActive(true);
     }
    
 }

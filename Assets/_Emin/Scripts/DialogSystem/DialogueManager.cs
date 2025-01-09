@@ -3,12 +3,14 @@ using UnityEngine;
 
 public class DialogueManager : MonoBehaviour
 {
+    public static DialogueManager Instance;
+    
     public List<SO_Dialogue> dialogues;
-
     private Dictionary<CharacterType, SO_Dialogue> _dialogueDictionary;
     
     private void Awake()
     {
+        Instance = this;
         _dialogueDictionary = new Dictionary<CharacterType, SO_Dialogue>();
         foreach (var dialogue in dialogues)
         {
@@ -16,6 +18,17 @@ public class DialogueManager : MonoBehaviour
         }
     }
     
+    public void QuestionSelected(CharacterType characterType, int answerIndex)
+    {
+        if (_dialogueDictionary.TryGetValue(characterType, out var dialogue))
+        {
+            DialogueEvents.Instance.QuestionSelected(new List<string>(dialogue.answers), answerIndex);
+        }
+        else
+        {
+            Debug.LogError("Dialogue not found for " + characterType);
+        }
+    }
     public void StartDialogue(CharacterType characterType)
     {
         if (_dialogueDictionary.TryGetValue(characterType, out var dialogue))

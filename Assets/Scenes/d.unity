@@ -136,7 +136,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06a09f94d5c840d4ab53105444f4e4a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueManager: {fileID: 956766525}
 --- !u!1 &80606740
 GameObject:
   m_ObjectHideFlags: 0
@@ -898,7 +897,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 504317875}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 606418406}
+        m_TargetAssemblyTypeName: DialogueUI, Assembly-CSharp
+        m_MethodName: QuestionSelectedInitialization
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &543650437
 GameObject:
   m_ObjectHideFlags: 0
@@ -1336,7 +1347,7 @@ MonoBehaviour:
   - {fileID: 504317875}
   - {fileID: 1386141835}
   - {fileID: 703392414}
-  answerButtons:
+  answerText:
   - {fileID: 893729590}
   - {fileID: 777801766}
   - {fileID: 930713111}
@@ -1815,7 +1826,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 703392414}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 606418406}
+        m_TargetAssemblyTypeName: DialogueUI, Assembly-CSharp
+        m_MethodName: QuestionSelectedInitialization
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &703848234
 GameObject:
   m_ObjectHideFlags: 0
@@ -4124,7 +4147,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1386141835}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 606418406}
+        m_TargetAssemblyTypeName: DialogueUI, Assembly-CSharp
+        m_MethodName: QuestionSelectedInitialization
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1502063253
 GameObject:
   m_ObjectHideFlags: 0

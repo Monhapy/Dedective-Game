@@ -3,16 +3,14 @@ using UnityEngine;
 
 public class PlayerInteractions : MonoBehaviour
 {
-    [SerializeField] private DialogueManager dialogueManager;
-
     private void OnTriggerEnter(Collider other)
     {
         CharacterTypeController npc = other.GetComponent<CharacterTypeController>();
         if (npc != null)
         {
             CharacterType characterType = npc.GetCharacterType();
-            dialogueManager.StartDialogue(characterType);
-            dialogueManager.ProvideAnswer(characterType);
+            DialogueManager.Instance.StartDialogue(characterType);
+            DialogueManager.Instance.ProvideAnswer(characterType);
             Debug.Log("NPC found");
         }
         else

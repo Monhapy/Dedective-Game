@@ -10,10 +10,15 @@ public class DialogueEvents : MonoBehaviour
     {
         Instance = this;
     }
-    
+   
+    public event Action<List<string>, int> OnQuestionSelected;
     public event Action<List<string>, CharacterType> OnQuestionAsked;
     public event Action<List<string>, CharacterType> OnAnswerGiven; 
-    
+
+    public void QuestionSelected(List<string> answer, int answerIndex)
+    {
+        OnQuestionSelected?.Invoke(answer,answerIndex);
+    }
     public void QuestionAsked(List<string> questions, CharacterType characterType)
     {
         OnQuestionAsked?.Invoke(questions, characterType);
@@ -23,4 +28,6 @@ public class DialogueEvents : MonoBehaviour
     {
         OnAnswerGiven?.Invoke(answers, characterType);
     }
+
+   
 }
