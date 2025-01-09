@@ -1,6 +1,3 @@
-using System;
-using Unity.Cinemachine;
-using UnityEditor;
 using UnityEngine;
 
 
@@ -49,7 +46,6 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-       
         Move();
         Jump();
         Sprint();

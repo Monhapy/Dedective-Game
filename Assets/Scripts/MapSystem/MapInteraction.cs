@@ -1,11 +1,9 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using UnityEditor.ShaderGraph;
 using UnityEngine;
 using UnityEngine.UI;
-
+using DG.Tweening;
 public class MapInteraction : MonoBehaviour
 {
     [Header("Map Interaction Variables")] [SerializeField]
@@ -29,6 +27,7 @@ public class MapInteraction : MonoBehaviour
     private void Awake()
     {
         mapPopup.gameObject.SetActive(false);   
+        
     }
 
     private void LateUpdate()
@@ -61,7 +60,6 @@ public class MapInteraction : MonoBehaviour
                     StartCoroutine(MapPopupController());
                 }
                 Debug.DrawRay(ray.origin, ray.direction * hit.distance, Color.red);
-                Debug.Log(hit.transform.name);
             }
             else
             {
@@ -75,7 +73,7 @@ public class MapInteraction : MonoBehaviour
             Debug.DrawRay(ray.origin, ray.direction * interactionDistance, Color.green);
         }
     }
-
+    
     private void MapSwitch()
     {
         if (mapObjects.Count > 0)
@@ -84,7 +82,9 @@ public class MapInteraction : MonoBehaviour
             {
                 _isEnabled = !_isEnabled;
                 mapObject.SetActive(_isEnabled);
+                mapObject.transform.DOScale(Vector3.zero,0.5f).From();
             }
+            
         }
     }
 

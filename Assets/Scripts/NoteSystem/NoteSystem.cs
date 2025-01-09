@@ -85,6 +85,7 @@ public class NoteSystem : MonoBehaviour
     {
         noteSprite.gameObject.SetActive(false);
         notePanelInstance = Instantiate(notePanel, notePanel.transform.parent);
+        MapSystem.Instance.GetTalkingNPC(_noteObjects.Count);
         _noteObjects.Add(notePanelInstance);
         foreach (var noteObject in _noteObjects)
         {
