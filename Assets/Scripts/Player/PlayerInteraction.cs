@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public partial class PlayerInteraction : MonoBehaviour
+public class PlayerInteraction : MonoBehaviour
 {
     private IInteractable _interactableObject;
     private PlayerDialogSystem _playerDialogSystem;
