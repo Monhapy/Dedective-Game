@@ -24,9 +24,6 @@ public class DialogueUI : MonoBehaviour
         DialogueEvents.Instance.OnQuestionAsked -= ShowQuestions;
         DialogueEvents.Instance.OnAnswerGiven -= ShowAnswers;
     }
-    
- 
-    
     private void QuestionSelected(List<string> answer,int answerIndex)
     {
         _currentAnswerIndex = answerIndex;
@@ -34,7 +31,7 @@ public class DialogueUI : MonoBehaviour
         {
             t.transform.parent.gameObject.SetActive(false);
         }
-        answerText[_currentAnswerIndex].text = answer[answerIndex];
+        answerText[_currentAnswerIndex].text = answer[_currentAnswerIndex];
     }
 
     private void ShowQuestions (List<string> questions, CharacterType characterType)
