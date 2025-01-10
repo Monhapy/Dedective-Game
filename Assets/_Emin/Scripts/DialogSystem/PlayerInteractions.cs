@@ -1,21 +1,42 @@
-using System;
 using UnityEngine;
 
 public class PlayerInteractions : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
+    [SerializeField] private Canvas dialogueCanvas;
+    private CharacterType _characterType;
+    private CharacterTypeController _npc;
+
+    
+    private void OnTriggerStay(Collider other)
     {
-        CharacterTypeController npc = other.GetComponent<CharacterTypeController>();
-        if (npc != null)
+        _npc = other.GetComponent<CharacterTypeController>();
+        if (_npc != null && Input.GetKeyDown(KeyCode.E))
         {
-            CharacterType characterType = npc.GetCharacterType();
-            DialogueManager.Instance.StartDialogue(characterType);
-            DialogueManager.Instance.ProvideAnswer(characterType);
+            dialogueCanvas.gameObject.SetActive(true);
+            _characterType = _npc.GetCharacterType();
+            DialogueManager.Instance.StartDialogue(_characterType, DialogueUI._currentStage);
             Debug.Log("NPC found");
+            Debug.Log(_npc.GetCharacterType());
         }
-        else
+        else if(_npc == null && Input.GetKeyDown(KeyCode.E)) 
         {
             Debug.LogWarning("NPC not found");
         }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (_npc!=null)
+        {
+            dialogueCanvas.gameObject.SetActive(false);
+            DialogueManager.Instance.QuestionExit(_characterType, DialogueUI._currentStage);
+        }
+        
+    }
+
+    public void OnClickQuestion(int answerIndex)
+    {
+        DialogueManager.Instance.ProvideAnswer(_characterType,DialogueUI._currentStage);
+        DialogueManager.Instance.QuestionSelected(_characterType, answerIndex,DialogueUI._currentStage);
     }
 }

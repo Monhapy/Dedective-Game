@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Manav_Stage1
   m_EditorClassIdentifier: 
   questions:
-  - "Soru 1\t\t"
-  - Soru 2
-  - 'Soru 3 '
+  - "Soru 1\t\t1"
+  - Soru 2 1
+  - Soru 3  1
   answers:
   - Cevap 1
   - Cevap 2

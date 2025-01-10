@@ -11,22 +11,29 @@ public class DialogueEvents : MonoBehaviour
         Instance = this;
     }
    
-    public event Action<List<string>, int> OnQuestionSelected;
-    public event Action<List<string>, CharacterType> OnQuestionAsked;
-    public event Action<List<string>, CharacterType> OnAnswerGiven; 
+    public event Action<List<string>, int, int > OnQuestionSelected;
+    public event Action<List<string>, CharacterType, int> OnQuestionAsked;
+    public event Action<List<string>, CharacterType, int> OnAnswerGiven;
 
-    public void QuestionSelected(List<string> answer, int answerIndex)
+    public event Action<List<string>, List<string>, int> OnQuestionExit; 
+
+    public void QuestionSelected(List<string> answer, int answerIndex, int stageIndex)
     {
-        OnQuestionSelected?.Invoke(answer,answerIndex);
+        OnQuestionSelected?.Invoke(answer,answerIndex, stageIndex);
     }
-    public void QuestionAsked(List<string> questions, CharacterType characterType)
+    public void QuestionAsked(List<string> questions, CharacterType characterType, int stageIndex)
     {
-        OnQuestionAsked?.Invoke(questions, characterType);
+        OnQuestionAsked?.Invoke(questions, characterType,stageIndex);
     }
     
-    public void AnswerGiven(List<string> answers, CharacterType characterType)
+    public void AnswerGiven(List<string> answers, CharacterType characterType, int stageIndex)
     {
-        OnAnswerGiven?.Invoke(answers, characterType);
+        OnAnswerGiven?.Invoke(answers, characterType, stageIndex);
+    }
+
+    public void QuestionExit(List<string> answers, List<string> questions, int stageIndex)
+    {
+        OnQuestionExit?.Invoke(answers, questions,stageIndex);
     }
 
    

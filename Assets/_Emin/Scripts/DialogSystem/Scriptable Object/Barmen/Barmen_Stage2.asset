@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Barmen_Stage2
   m_EditorClassIdentifier: 
   questions:
-  - Soru 1 (Barmen)
-  - Soru 2 (Barmen)
-  - Soru 3 (Barmen)
+  - Soru 1 (Barmen) 2
+  - Soru 2 (Barmen) 2
+  - Soru 3 (Barmen) 2
   answers:
-  - Cevap 1 (Barmen)
-  - Cevap 2 (Barmen)
-  - Cevap 3 (Barmen)
-  characterType: 2
+  - Cevap 1 (Barmen) 2
+  - Cevap 2 (Barmen) 2
+  - Cevap 3 (Barmen) 2
+  characterType: 0
