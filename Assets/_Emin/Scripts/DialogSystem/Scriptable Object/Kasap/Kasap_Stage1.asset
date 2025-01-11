@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Kasap_Stage1
   m_EditorClassIdentifier: 
   questions:
-  - "Soru 1\t\t"
-  - Soru 2
-  - 'Soru 3 '
+  - Soru 1 (Kasap) 1
+  - Soru 2 (Kasap) 1
+  - Soru 3  (Kasap) 1
   answers:
-  - Cevap 1
-  - Cevap 2
-  - Cevap 3
+  - Cevap 1 (Kasap) 1
+  - Cevap 2 (Kasap) 1
+  - Cevap 3 (Kasap) 1
   characterType: 1

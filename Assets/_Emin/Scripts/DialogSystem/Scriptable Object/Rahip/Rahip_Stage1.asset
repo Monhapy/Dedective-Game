@@ -13,11 +13,19 @@ MonoBehaviour:
   m_Name: Rahip_Stage1
   m_EditorClassIdentifier: 
   questions:
-  - "Soru 1\t\t1"
-  - Soru 2 1
-  - Soru 3  1
+  - "Bir adam sahilde \xF6l\xFC bulundu. Yan\u0131nda bir s\u0131rt \xE7antas\u0131
+    var ama i\xE7i bo\u015F. Ne olabilir sence?"
+  - "Bir cinayet oldu. Kad\u0131n\u0131n cesedi bir \xE7al\u0131\u015Fma masas\u0131nda,
+    masan\u0131n \xFCst\xFCnde kanl\u0131 bir not var. Notta \u20182-4-1-8\u2019
+    yaz\u0131l\u0131. Ne diyorsun, ne anlama geliyor?"
+  - "\u0130ki ki\u015Fi satran\xE7 oynuyorlar ve 5 oyun oynand\u0131. Her biri de
+    2 oyun kazand\u0131. Bu nas\u0131l olabilir?"
   answers:
-  - Cevap 1
-  - Cevap 2
-  - Cevap 3
+  - "Hmm... Bence adam para\u015F\xFCtle atlad\u0131 ama para\u015F\xFCt a\xE7\u0131lmad\u0131\u011F\u0131
+    i\xE7in \xF6lm\xFC\u015F. S\u0131rt \xE7antas\u0131 da para\u015F\xFCtm\xFC\u015F
+    zaten!"
+  - "Bu basit bir \u015Fey! O numaralar telefon tu\u015Flar\u0131na denk geliyor.
+    2 - B, 4 - H, 1 - A, 8 - T. Yani katilin ad\u0131 Baht!"
+  - "Ah, bu \xE7ok basit! \u0130ki ki\u015Fi ba\u015Fka biriyle daha oynuyor. Yani
+    asl\u0131nda 3 ki\u015Fi var ama her biri iki\u015Fer oyun kazanm\u0131\u015F."
   characterType: 0

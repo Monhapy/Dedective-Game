@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: "F\u0131r\u0131nc\u0131_Stage3"
   m_EditorClassIdentifier: 
   questions:
-  - "Soru 1\t\t(F\u0131r\u0131nc\u0131)"
-  - Soru 2
-  - 'Soru 3 '
+  - "Soru 1 (F\u0131r\u0131nc\u0131) 3"
+  - "Soru 2 (F\u0131r\u0131nc\u0131) 3"
+  - "Soru 3 (F\u0131r\u0131nc\u0131) 3"
   answers:
-  - Cevap 1
-  - Cevap 2
-  - Cevap 3
+  - "Cevap 1 (F\u0131r\u0131nc\u0131) 3"
+  - "Cevap 2 (F\u0131r\u0131nc\u0131) 3"
+  - "Cevap 3 (F\u0131r\u0131nc\u0131) 3"
   characterType: 3

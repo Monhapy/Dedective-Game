@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Manav_Stage3
   m_EditorClassIdentifier: 
   questions:
-  - "Soru 1\t\t3"
-  - Soru 2 3
-  - Soru 3 3
+  - Soru 1 (Manav) 3
+  - Soru 2 (Manav) 3
+  - Soru 3 (Manav) 3
   answers:
-  - Cevap 1
-  - Cevap 2
-  - Cevap 3
+  - Cevap 1 (Manav) 3
+  - Cevap 2 (Manav) 3
+  - Cevap 3 (Manav) 3
   characterType: 4

@@ -26,16 +26,27 @@ public class DialogueManager : MonoBehaviour
                 {
                     _dialogueDictionary.Add(soDialogue.characterType, new List<SO_Dialogue>());
                 }
+
+                _dialogueDictionary[soDialogue.characterType].Add(soDialogue);
             }
         }
     }
 
     public void QuestionSelected(CharacterType characterType, int answerIndex, int stageIndex)
     {
+        int previousStageIndex = stageIndex - 1;
         if (_dialogueDictionary.TryGetValue(characterType, out var dialogue))
         {
-            DialogueEvents.Instance.QuestionSelected(new List<string>(dialogue[stageIndex].answers), answerIndex,
-                stageIndex);
+            if (previousStageIndex>=0 && stageIndex<dialogue.Count)
+            {
+                DialogueEvents.Instance.QuestionSelected(new List<string>(dialogue[previousStageIndex].answers),
+                    answerIndex,
+                    new List<string>(dialogue[stageIndex].questions));
+                Debug.Log("Previous Stage: " + previousStageIndex);
+                Debug.Log("Stage Index " + stageIndex);  
+            }
+                
+            
         }
         else
         {
@@ -45,11 +56,15 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(CharacterType characterType, int stageIndex)
     {
+        stageIndex = (int)characterType;
         if (_dialogueDictionary.TryGetValue(characterType, out var dialogue))
         {
-            DialogueEvents.Instance.QuestionAsked(new List<string>(dialogue[stageIndex].questions), characterType,
-                stageIndex);
-            Debug.Log(stageIndex);
+            if (stageIndex<dialogue.Count)
+            {
+                DialogueEvents.Instance.QuestionAsked(new List<string>(dialogue[stageIndex].questions),
+                    characterType);
+            }
+           
         }
         else
         {
@@ -61,9 +76,10 @@ public class DialogueManager : MonoBehaviour
     {
         if (_dialogueDictionary.TryGetValue(characterType, out var dialogue))
         {
-            DialogueEvents.Instance.AnswerGiven(new List<string>(dialogue[stageIndex].answers), characterType,
-                stageIndex);
-            Debug.Log(stageIndex);
+            if (stageIndex < dialogue.Count)
+            {
+                DialogueEvents.Instance.AnswerGiven(new List<string>(dialogue[stageIndex].answers), characterType);
+            }
         }
         else
         {
@@ -75,8 +91,12 @@ public class DialogueManager : MonoBehaviour
     {
         if (_dialogueDictionary.TryGetValue(characterType, out var dialogue))
         {
-            DialogueEvents.Instance.QuestionExit(new List<string>(dialogue[stageIndex].answers),
-                new List<string>(dialogue[stageIndex].questions), stageIndex);
+            if (stageIndex<dialogue.Count)
+            {
+                DialogueEvents.Instance.QuestionExit(new List<string>(dialogue[stageIndex].answers),
+                    new List<string>(dialogue[stageIndex].questions));
+            }
+            
         }
         else
         {

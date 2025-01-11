@@ -14,7 +14,7 @@ public class PlayerInteractions : MonoBehaviour
         {
             dialogueCanvas.gameObject.SetActive(true);
             _characterType = _npc.GetCharacterType();
-            DialogueManager.Instance.StartDialogue(_characterType, DialogueUI._currentStage);
+            DialogueManager.Instance.StartDialogue(_characterType, DialogueUI.CurrentStage);
             Debug.Log("NPC found");
             Debug.Log(_npc.GetCharacterType());
         }
@@ -29,14 +29,15 @@ public class PlayerInteractions : MonoBehaviour
         if (_npc!=null)
         {
             dialogueCanvas.gameObject.SetActive(false);
-            DialogueManager.Instance.QuestionExit(_characterType, DialogueUI._currentStage);
+            DialogueManager.Instance.QuestionExit(_characterType, DialogueUI.CurrentStage);
         }
         
     }
 
     public void OnClickQuestion(int answerIndex)
     {
-        DialogueManager.Instance.ProvideAnswer(_characterType,DialogueUI._currentStage);
-        DialogueManager.Instance.QuestionSelected(_characterType, answerIndex,DialogueUI._currentStage);
+        DialogueManager.Instance.ProvideAnswer(_characterType,DialogueUI.CurrentStage);
+        DialogueManager.Instance.QuestionSelected(_characterType, answerIndex,DialogueUI.CurrentStage);
+        DialogueUI.CurrentStage++;
     }
 }

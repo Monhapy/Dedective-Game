@@ -2598,9 +2598,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogues:
   - dialogueStage:
-    - {fileID: 11400000, guid: 60502388bc5f10944886a846407bee98, type: 2}
-    - {fileID: 11400000, guid: 0abebdf6d45a21d4c946977213781678, type: 2}
-    - {fileID: 11400000, guid: 2f94408a66daafb47ac54c8b49efc77b, type: 2}
+    - {fileID: 11400000, guid: dc7fbb25399c5674490c5e72fbe77f33, type: 2}
+    - {fileID: 11400000, guid: 51296892426550b4890be490fa8610ca, type: 2}
+    - {fileID: 11400000, guid: a68fcf4f2b3aec14fa04d020fba4fbb3, type: 2}
+  - dialogueStage:
+    - {fileID: 11400000, guid: e71e3d0032ee0884d94c157f4dc0660a, type: 2}
+    - {fileID: 11400000, guid: 1acb68446f025574890d181a8c1eb596, type: 2}
+    - {fileID: 11400000, guid: 9ea8489d386ccdf4fbd28f98708d33bc, type: 2}
   - dialogueStage:
     - {fileID: 11400000, guid: 3a0a010ffe68008469bb005b231732b5, type: 2}
     - {fileID: 11400000, guid: 43a44003f73cede458c9bdb6a06c26cb, type: 2}
@@ -2610,17 +2614,13 @@ MonoBehaviour:
     - {fileID: 11400000, guid: d2f3415ccfe19f3428c67a230316fa02, type: 2}
     - {fileID: 11400000, guid: 4f8274c00832e2042a044828db2d14b6, type: 2}
   - dialogueStage:
-    - {fileID: 11400000, guid: e71e3d0032ee0884d94c157f4dc0660a, type: 2}
-    - {fileID: 11400000, guid: 1acb68446f025574890d181a8c1eb596, type: 2}
-    - {fileID: 11400000, guid: 9ea8489d386ccdf4fbd28f98708d33bc, type: 2}
-  - dialogueStage:
     - {fileID: 11400000, guid: 0cb17022bc1963149b9e9e375c03f036, type: 2}
     - {fileID: 11400000, guid: 861545b1631c7e443a85a4b707f6d112, type: 2}
     - {fileID: 11400000, guid: cfefd557736e59f47a459f5f723fe5ea, type: 2}
   - dialogueStage:
-    - {fileID: 11400000, guid: dc7fbb25399c5674490c5e72fbe77f33, type: 2}
-    - {fileID: 11400000, guid: 51296892426550b4890be490fa8610ca, type: 2}
-    - {fileID: 11400000, guid: a68fcf4f2b3aec14fa04d020fba4fbb3, type: 2}
+    - {fileID: 11400000, guid: 60502388bc5f10944886a846407bee98, type: 2}
+    - {fileID: 11400000, guid: 0abebdf6d45a21d4c946977213781678, type: 2}
+    - {fileID: 11400000, guid: 2f94408a66daafb47ac54c8b49efc77b, type: 2}
 --- !u!114 &956766527
 MonoBehaviour:
   m_ObjectHideFlags: 0

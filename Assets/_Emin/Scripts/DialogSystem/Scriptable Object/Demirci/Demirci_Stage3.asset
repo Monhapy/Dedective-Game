@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Demirci_Stage3
   m_EditorClassIdentifier: 
   questions:
-  - "Soru 1 (Demirci)\t"
-  - "Soru 2 (Demirci)\t"
-  - Soru 3 (Demirci)
+  - "Soru 1 (Demirci)\t3"
+  - "Soru 2 (Demirci)\t3"
+  - Soru 3 (Demirci) 3
   answers:
-  - Cevap 1 (Demirci)
-  - Cevap 2 (Demirci)
-  - Cevap 3 (Demirci)
+  - Cevap 1 (Demirci) 3
+  - Cevap 2 (Demirci) 3
+  - Cevap 3 (Demirci) 3
   characterType: 5
