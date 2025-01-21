@@ -1,4 +1,4 @@
-public enum CharacterType
+public enum CharacterTypeHandler
 {
     Rahip,
     Kasap,

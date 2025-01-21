@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9886b393bca68e14590af9b28afe285e, type: 3}
+  m_Name: Rahip_Stage2
+  m_EditorClassIdentifier: 
+  questions:
+  - "Soru 1: \u0130nsanlara nas\u0131l yard\u0131m ediyorsunuz?"
+  - "Soru 2: G\xFCnl\xFCk ya\u015Famda inanc\u0131 nas\u0131l koruyabiliriz?"
+  - "Soru 3: Zor zamanlarda ne yapmal\u0131y\u0131z?"
+  answers:
+  - "Cevap 1: Onlar\u0131 dinleyerek ve do\u011Fru yolu bulmalar\u0131na rehberlik
+    ederek."
+  - "Cevap 2: K\xFC\xE7\xFCk iyilikler yaparak ve Tanr\u0131'ya olan g\xFCvenimizi
+    kaybetmeyerek."
+  - "Cevap 3: Sab\u0131rl\u0131 olmal\u0131 ve her zaman bir umut \u0131\u015F\u0131\u011F\u0131
+    oldu\u011Funu unutmamal\u0131y\u0131z."
+  characterTypeHandler: 0

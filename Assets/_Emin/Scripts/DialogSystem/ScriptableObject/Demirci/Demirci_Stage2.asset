@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9886b393bca68e14590af9b28afe285e, type: 3}
+  m_Name: Demirci_Stage2
+  m_EditorClassIdentifier: 
+  questions:
+  - "Soru 1: En \xE7ok hangi aletleri yap\u0131yorsunuz?"
+  - "Soru 2: Bir k\u0131l\u0131\xE7 yapmak ne kadar s\xFCrer?"
+  - "Soru 3: Demir d\xF6vmenin s\u0131rr\u0131 nedir?"
+  answers:
+  - "Cevap 1: \xC7eki\xE7, balta ve tar\u0131m aletleri en \xE7ok talep edilenler."
+  - "Cevap 2: Detay\u0131na ba\u011Fl\u0131 olarak birka\xE7 g\xFCn ile bir hafta
+    aras\u0131nda de\u011Fi\u015Fir."
+  - "Cevap 3: Sab\u0131rl\u0131 olmak ve do\u011Fru s\u0131cakl\u0131\u011F\u0131
+    tutturmak."
+  characterTypeHandler: 5

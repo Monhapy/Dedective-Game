@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9886b393bca68e14590af9b28afe285e, type: 3}
+  m_Name: Rahip_Stage1
+  m_EditorClassIdentifier: 
+  questions:
+  - 'Soru 1: Kilisede yeni misiniz?'
+  - "Soru 2: \u0130nan\xE7 hakk\u0131nda \xE7ok \u015Fey biliyor musunuz?"
+  - "Soru 3: Dua etmek neden bu kadar \xF6nemli?"
+  answers:
+  - "Cevap 1: Evet, burada hizmet etmeye yeni ba\u015Flad\u0131m. Toplulu\u011Fumuza
+    al\u0131\u015Fmaya \xE7al\u0131\u015F\u0131yorum."
+  - "Cevap 2: \xD6\u011Frenmeye devam ediyorum. Her g\xFCn yeni bir \u015Fey ke\u015Ffediyorum."
+  - "Cevap 3: Dua, Tanr\u0131 ile ba\u011Flant\u0131 kurman\u0131n en g\xFC\xE7l\xFC
+    yollar\u0131ndan biridir."
+  characterTypeHandler: 0

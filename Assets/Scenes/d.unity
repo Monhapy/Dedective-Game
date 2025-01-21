@@ -119,17 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &42957803 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8101085364941334244, guid: 833f8393d989d5946b7d8be3215145f3, type: 3}
-  m_PrefabInstance: {fileID: 425766557}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06a09f94d5c840d4ab53105444f4e4a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &80606740
 GameObject:
   m_ObjectHideFlags: 0
@@ -676,10 +665,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 8101085364941334244, guid: 833f8393d989d5946b7d8be3215145f3, type: 3}
+    - target: {fileID: 7008042465426644831, guid: 833f8393d989d5946b7d8be3215145f3, type: 3}
       propertyPath: dialogueCanvas
       value: 
       objectReference: {fileID: 606418404}
+    - target: {fileID: 7008042465426644831, guid: 833f8393d989d5946b7d8be3215145f3, type: 3}
+      propertyPath: _dialogueManager
+      value: 
+      objectReference: {fileID: 956766525}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -885,7 +878,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 42957803}
+      - m_Target: {fileID: 1075530499}
         m_TargetAssemblyTypeName: PlayerInteractions, Assembly-CSharp
         m_MethodName: OnClickQuestion
         m_Mode: 3
@@ -1161,7 +1154,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 557635094}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19335966ca5730641a14c4e79e844eef, type: 3}
+  m_Script: {fileID: 11500000, guid: cde48534328031343b9ead092bd9e52f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   characterType: 1
@@ -1327,7 +1320,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 606418401}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9a2bf925c87e6e4494a0487d02d4513, type: 3}
+  m_Script: {fileID: 11500000, guid: 2a1da7e531b85da4fb24012f59431583, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   questionText:
@@ -1453,7 +1446,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 630950294}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19335966ca5730641a14c4e79e844eef, type: 3}
+  m_Script: {fileID: 11500000, guid: cde48534328031343b9ead092bd9e52f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   characterType: 5
@@ -1683,7 +1676,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 702316265}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19335966ca5730641a14c4e79e844eef, type: 3}
+  m_Script: {fileID: 11500000, guid: cde48534328031343b9ead092bd9e52f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   characterType: 2
@@ -1811,7 +1804,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 42957803}
+      - m_Target: {fileID: 1075530499}
         m_TargetAssemblyTypeName: PlayerInteractions, Assembly-CSharp
         m_MethodName: OnClickQuestion
         m_Mode: 3
@@ -2511,7 +2504,7 @@ GameObject:
   - component: {fileID: 956766522}
   - component: {fileID: 956766524}
   - component: {fileID: 956766525}
-  - component: {fileID: 956766527}
+  - component: {fileID: 956766526}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2593,35 +2586,41 @@ MonoBehaviour:
   m_GameObject: {fileID: 956766521}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d9f573e63086a64e9e53ad0522c2f0f, type: 3}
+  m_Script: {fileID: 11500000, guid: 67c9c995243f5bc4d81f9541d0de427f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogues:
-  - dialogueStage:
-    - {fileID: 11400000, guid: dc7fbb25399c5674490c5e72fbe77f33, type: 2}
-    - {fileID: 11400000, guid: 51296892426550b4890be490fa8610ca, type: 2}
-    - {fileID: 11400000, guid: a68fcf4f2b3aec14fa04d020fba4fbb3, type: 2}
-  - dialogueStage:
-    - {fileID: 11400000, guid: e71e3d0032ee0884d94c157f4dc0660a, type: 2}
-    - {fileID: 11400000, guid: 1acb68446f025574890d181a8c1eb596, type: 2}
-    - {fileID: 11400000, guid: 9ea8489d386ccdf4fbd28f98708d33bc, type: 2}
-  - dialogueStage:
-    - {fileID: 11400000, guid: 3a0a010ffe68008469bb005b231732b5, type: 2}
-    - {fileID: 11400000, guid: 43a44003f73cede458c9bdb6a06c26cb, type: 2}
-    - {fileID: 11400000, guid: 747918f514ac2824685d15a3cf0a864d, type: 2}
-  - dialogueStage:
-    - {fileID: 11400000, guid: d307707174f0aa7438e702fc49ef47f2, type: 2}
-    - {fileID: 11400000, guid: d2f3415ccfe19f3428c67a230316fa02, type: 2}
-    - {fileID: 11400000, guid: 4f8274c00832e2042a044828db2d14b6, type: 2}
-  - dialogueStage:
-    - {fileID: 11400000, guid: 0cb17022bc1963149b9e9e375c03f036, type: 2}
-    - {fileID: 11400000, guid: 861545b1631c7e443a85a4b707f6d112, type: 2}
-    - {fileID: 11400000, guid: cfefd557736e59f47a459f5f723fe5ea, type: 2}
-  - dialogueStage:
-    - {fileID: 11400000, guid: 60502388bc5f10944886a846407bee98, type: 2}
-    - {fileID: 11400000, guid: 0abebdf6d45a21d4c946977213781678, type: 2}
-    - {fileID: 11400000, guid: 2f94408a66daafb47ac54c8b49efc77b, type: 2}
---- !u!114 &956766527
+  dialogueStage:
+  - Dialogues:
+    - {fileID: 11400000, guid: 6532005a2a4e99946aff7309ea7e3430, type: 2}
+    - {fileID: 11400000, guid: deaeb9246711b23418ef08eb7ae6e4e8, type: 2}
+    - {fileID: 11400000, guid: 27888ba0c1e179b499467917b5f07527, type: 2}
+  - Dialogues:
+    - {fileID: 11400000, guid: c29b838cdb6c5b54a99add91532c5d04, type: 2}
+    - {fileID: 11400000, guid: 1c01bec3996c6814eb860235cdbe1ba7, type: 2}
+    - {fileID: 11400000, guid: b36c943419b33db40846a89434f2fd35, type: 2}
+  - Dialogues:
+    - {fileID: 11400000, guid: 3c5b4e80a27e467478d772a05ce7bd49, type: 2}
+    - {fileID: 11400000, guid: 62ed927ed0b7dfa42afbee5ae8e537d7, type: 2}
+    - {fileID: 11400000, guid: 0088974b79711104093608cb696f9998, type: 2}
+  - Dialogues:
+    - {fileID: 11400000, guid: 64ede0c4cc96708408407d7370e5f546, type: 2}
+    - {fileID: 11400000, guid: ed4b60ea20189174bb5529cc3aecbcf4, type: 2}
+    - {fileID: 11400000, guid: 911a4b375213ea340abadfddf2aafd70, type: 2}
+    - {fileID: 11400000, guid: 911a4b375213ea340abadfddf2aafd70, type: 2}
+  - Dialogues:
+    - {fileID: 11400000, guid: 155130a14a343694db5585698f4a7af9, type: 2}
+    - {fileID: 11400000, guid: de25080ddb355df4d8a5f2b8561595ca, type: 2}
+    - {fileID: 11400000, guid: 3885cfadcdaad624a92f7a3ba729adef, type: 2}
+    - {fileID: 11400000, guid: 3885cfadcdaad624a92f7a3ba729adef, type: 2}
+    - {fileID: 11400000, guid: 3885cfadcdaad624a92f7a3ba729adef, type: 2}
+  - Dialogues:
+    - {fileID: 11400000, guid: 6d7c838682bce9347bda0d8802535a4a, type: 2}
+    - {fileID: 11400000, guid: 38d1a72f66a44de459f708342ebd9e30, type: 2}
+    - {fileID: 11400000, guid: 993837386ebdcb0449b9d570e53b6ee7, type: 2}
+    - {fileID: 11400000, guid: 993837386ebdcb0449b9d570e53b6ee7, type: 2}
+    - {fileID: 11400000, guid: 993837386ebdcb0449b9d570e53b6ee7, type: 2}
+    - {fileID: 11400000, guid: 993837386ebdcb0449b9d570e53b6ee7, type: 2}
+--- !u!114 &956766526
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2630,7 +2629,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 956766521}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a06725fadb7bc8445b2be88466b6d151, type: 3}
+  m_Script: {fileID: 11500000, guid: 626c05a1db6a2a9449e82c72723163e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &957286559
@@ -2927,7 +2926,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000767202}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19335966ca5730641a14c4e79e844eef, type: 3}
+  m_Script: {fileID: 11500000, guid: cde48534328031343b9ead092bd9e52f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   characterType: 3
@@ -3134,6 +3133,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &1075530499 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7008042465426644831, guid: 833f8393d989d5946b7d8be3215145f3, type: 3}
+  m_PrefabInstance: {fileID: 425766557}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f825b747fc425a4cba8b1d14016e1bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1097079049
 GameObject:
   m_ObjectHideFlags: 0
@@ -3604,7 +3614,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1292052350}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19335966ca5730641a14c4e79e844eef, type: 3}
+  m_Script: {fileID: 11500000, guid: cde48534328031343b9ead092bd9e52f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   characterType: 0
@@ -3840,7 +3850,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 42957803}
+      - m_Target: {fileID: 1075530499}
         m_TargetAssemblyTypeName: PlayerInteractions, Assembly-CSharp
         m_MethodName: OnClickQuestion
         m_Mode: 3
@@ -5528,7 +5538,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2082481778}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19335966ca5730641a14c4e79e844eef, type: 3}
+  m_Script: {fileID: 11500000, guid: cde48534328031343b9ead092bd9e52f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   characterType: 4

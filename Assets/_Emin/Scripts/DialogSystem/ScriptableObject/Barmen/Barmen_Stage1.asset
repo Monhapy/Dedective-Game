@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9886b393bca68e14590af9b28afe285e, type: 3}
+  m_Name: Barmen_Stage1
+  m_EditorClassIdentifier: 
+  questions:
+  - "Soru 1: \u0130lk i\xE7kinizi ne zaman yapt\u0131n\u0131z?"
+  - "Soru 2: Hangi kokteyli yapmay\u0131 seviyorsunuz?"
+  - "Soru 3: Bar i\u015Fi zor mu?"
+  answers:
+  - "Cevap 1: Daha ge\xE7en hafta, biraz heyecanland\u0131m ama g\xFCzel oldu."
+  - "Cevap 2: \u015Eimdilik basit olanlar\u0131, \xF6rne\u011Fin gin tonic."
+  - "Cevap 3: \u0130nsanlarla s\xFCrekli ileti\u015Fimde olmak zor ama e\u011Flenceli."
+  characterTypeHandler: 2
