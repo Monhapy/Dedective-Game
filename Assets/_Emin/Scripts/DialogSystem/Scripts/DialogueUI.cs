@@ -27,15 +27,19 @@ public class DialogueUI : MonoBehaviour
     private void QuestionStart(List<string> questions)
     {
         _currentStage = 0;
-        // answerText.transform.parent.gameObject.SetActive(false);
-        for (int i = 0; i < questionText.Count; i++)
+        if (_currentStage == 0)
         {
-            questionText[i].text = questions[i];
+            answerText.transform.parent.gameObject.SetActive(false);
+            for (int i = 0; i < questionText.Count; i++)
+            {
+                questionText[i].text = questions[i];
+            }
         }
     }
 
     private void QuestionSelect(List<string> answer, List<string> questions, int answerIndex)
     {
+        Debug.Log($"QuestionSelect called. CurrentStage: {_currentStage}");
         foreach (var question in questionText)
         {
             question.transform.parent.gameObject.SetActive(false);
@@ -58,6 +62,6 @@ public class DialogueUI : MonoBehaviour
         {
             questionText[i].text = questions[i];
         }
-        Debug.LogWarning("Current Stage: " + _currentStage);
+        Debug.Log($"New CurrentStage: {_currentStage}");
     }
 }

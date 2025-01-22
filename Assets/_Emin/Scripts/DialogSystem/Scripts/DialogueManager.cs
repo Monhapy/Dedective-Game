@@ -45,7 +45,8 @@ public class DialogueManager : MonoBehaviour
         if (_dialogueDictionary.TryGetValue(characterTypeHandler, out var dialogueStages))
         {
             int stageIndex = (int)characterTypeHandler;
-            var dialogue = dialogueStages[stageIndex].Dialogues[dialogueIndex];
+            Debug.Log($"CharacterType: {characterTypeHandler}, StageIndex: {stageIndex}, DialogueIndex: {dialogueIndex}");
+            var dialogue = dialogueStages[stageIndex].Dialogues[DialogueUI._currentStage];
             DialogueEventHandler.Instance.QuestionStart(dialogue.questions);
         }
         else
