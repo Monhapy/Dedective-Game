@@ -12,15 +12,15 @@ public class DialogueEventHandler : MonoBehaviour
     }
 
     public event Action<List<string>> OnQuestionStart;
-    public event Action<List<string>> OnQuestionSelect;
+    public event Action<List<string>,List<string>,int> OnQuestionSelect;
     
     public void QuestionStart(List<string> question)
     {
         OnQuestionStart?.Invoke(question);
     }
 
-    public void QuestionSelect(List<string> answer)
+    public void QuestionSelect(List<string> answer,List<string> question, int answerIndex)
     {
-        OnQuestionSelect?.Invoke(answer);
+        OnQuestionSelect?.Invoke(answer,question,answerIndex);
     }
 }

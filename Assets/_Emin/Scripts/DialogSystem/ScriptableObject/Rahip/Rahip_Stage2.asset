@@ -13,14 +13,15 @@ MonoBehaviour:
   m_Name: Rahip_Stage2
   m_EditorClassIdentifier: 
   questions:
-  - "Soru 1: \u0130nsanlara nas\u0131l yard\u0131m ediyorsunuz?"
-  - "Soru 2: G\xFCnl\xFCk ya\u015Famda inanc\u0131 nas\u0131l koruyabiliriz?"
-  - "Soru 3: Zor zamanlarda ne yapmal\u0131y\u0131z?"
+  - "Soru 1: \u0130nsanlara nas\u0131l yard\u0131m ediyorsunuz? (Rahip 2)"
+  - "Soru 2: G\xFCnl\xFCk ya\u015Famda inanc\u0131 nas\u0131l koruyabiliriz? (Rahip
+    2)"
+  - "Soru 3: Zor zamanlarda ne yapmal\u0131y\u0131z? (Rahip 2)"
   answers:
   - "Cevap 1: Onlar\u0131 dinleyerek ve do\u011Fru yolu bulmalar\u0131na rehberlik
-    ederek."
+    ederek. (Rahip 2)"
   - "Cevap 2: K\xFC\xE7\xFCk iyilikler yaparak ve Tanr\u0131'ya olan g\xFCvenimizi
-    kaybetmeyerek."
+    kaybetmeyerek. (Rahip 2)"
   - "Cevap 3: Sab\u0131rl\u0131 olmal\u0131 ve her zaman bir umut \u0131\u015F\u0131\u011F\u0131
-    oldu\u011Funu unutmamal\u0131y\u0131z."
+    oldu\u011Funu unutmamal\u0131y\u0131z. (Rahip 2)"
   characterTypeHandler: 0

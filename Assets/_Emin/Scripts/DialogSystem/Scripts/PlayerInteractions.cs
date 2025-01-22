@@ -31,7 +31,8 @@ public class PlayerInteractions : MonoBehaviour
     
     public void OnClickQuestion(int answerIndex)
     {
-        _dialogueManager.QuestionSelect(_getCharacterType,answerIndex);
+        Debug.Log("Selected");
+        _dialogueManager.QuestionSelect(_getCharacterType, answerIndex);
     }
    
 }

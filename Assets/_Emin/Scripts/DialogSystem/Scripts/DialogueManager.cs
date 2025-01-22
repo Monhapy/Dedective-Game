@@ -33,10 +33,10 @@ public class DialogueManager : MonoBehaviour
             }
         }
 
-        foreach (var entry in _dialogueDictionary)
-        {
-            Debug.Log("CharacterTypeHandler: " + entry.Key + ", Stages Count: " + entry.Value.Count);
-        }
+        // foreach (var entry in _dialogueDictionary)
+        // {
+        //     Debug.Log("CharacterTypeHandler: " + entry.Key + ", Stages Count: " + entry.Value.Count);
+        // }
     }
 
 
@@ -54,13 +54,13 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public void QuestionSelect(CharacterTypeHandler characterTypeHandler, int dialogueIndex)
+    public void QuestionSelect(CharacterTypeHandler characterTypeHandler, int answerIndex)
     {
         if (_dialogueDictionary.TryGetValue(characterTypeHandler, out var dialogueStages))
         {
             int stageIndex = (int)characterTypeHandler;
-            var dialogue = dialogueStages[stageIndex].Dialogues[dialogueIndex];
-            DialogueEventHandler.Instance.QuestionSelect(dialogue.questions);
+            var dialogue = dialogueStages[stageIndex].Dialogues[DialogueUI._currentStage];
+            DialogueEventHandler.Instance.QuestionSelect(dialogue.answers, dialogue.questions, answerIndex);
         }
         else
         {

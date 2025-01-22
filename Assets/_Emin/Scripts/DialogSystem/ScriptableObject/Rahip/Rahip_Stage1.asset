@@ -13,13 +13,15 @@ MonoBehaviour:
   m_Name: Rahip_Stage1
   m_EditorClassIdentifier: 
   questions:
-  - 'Soru 1: Kilisede yeni misiniz?'
-  - "Soru 2: \u0130nan\xE7 hakk\u0131nda \xE7ok \u015Fey biliyor musunuz?"
-  - "Soru 3: Dua etmek neden bu kadar \xF6nemli?"
+  - 'Soru 1: Kilisede yeni misiniz? (Rahip 1)'
+  - "Soru 2: \u0130nan\xE7 hakk\u0131nda \xE7ok \u015Fey biliyor musunuz? (Rahip
+    1)"
+  - "Soru 3: Dua etmek neden bu kadar \xF6nemli? (Rahip 1)"
   answers:
   - "Cevap 1: Evet, burada hizmet etmeye yeni ba\u015Flad\u0131m. Toplulu\u011Fumuza
-    al\u0131\u015Fmaya \xE7al\u0131\u015F\u0131yorum."
-  - "Cevap 2: \xD6\u011Frenmeye devam ediyorum. Her g\xFCn yeni bir \u015Fey ke\u015Ffediyorum."
+    al\u0131\u015Fmaya \xE7al\u0131\u015F\u0131yorum. (Rahip 1)"
+  - "Cevap 2: \xD6\u011Frenmeye devam ediyorum. Her g\xFCn yeni bir \u015Fey ke\u015Ffediyorum.
+    (Rahip 1)"
   - "Cevap 3: Dua, Tanr\u0131 ile ba\u011Flant\u0131 kurman\u0131n en g\xFC\xE7l\xFC
-    yollar\u0131ndan biridir."
+    yollar\u0131ndan biridir. (Rahip 1)"
   characterTypeHandler: 0
