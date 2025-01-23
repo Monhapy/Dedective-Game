@@ -13,8 +13,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float verticalLookMaxValue = 90f;
     [SerializeField] private GameObject cameraPivot;
     [SerializeField] private float cameraDamping = 10;
-    [Header("Jump Variables")] 
-    [SerializeField] private float jumpHeight = 3;
     [SerializeField] private float fallMultiplier = 2.5f;
     [Header("Sprint Variables")]
     [SerializeField] private float sprintSpeed = 25f;
