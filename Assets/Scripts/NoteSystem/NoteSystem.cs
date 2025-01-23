@@ -98,9 +98,7 @@ public class NoteSystem : MonoBehaviour
 
     // ReSharper disable Unity.PerformanceAnalysis
     private void SwitchNote()
-    {
-        Debug.Log(isNoteActive);
-        Debug.Log(_noteAnimLength);
+    {   
         if (Input.GetKeyDown(switchNoteLeft) && _noteObjects.Count > 1 && currentNote > 0
             && isNoteActive && !_noteAnimator.GetCurrentAnimatorStateInfo(0).IsName("NoteAnimation"))
         {
@@ -114,9 +112,7 @@ public class NoteSystem : MonoBehaviour
             currentNote++;
             StartCoroutine(SwitchNoteArray());
         }
-
-        Debug.Log("Current Note: " + currentNote);
-        Debug.Log("Note Object Count: " + _noteObjects.Count);
+        
     }
 
     private IEnumerator SwitchNoteArray()

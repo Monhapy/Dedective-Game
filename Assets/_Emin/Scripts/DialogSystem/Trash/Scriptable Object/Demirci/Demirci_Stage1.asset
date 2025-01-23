@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1863a4c661b547458af1eeff2ee91e6, type: 3}
+  m_Name: Demirci_Stage1
+  m_EditorClassIdentifier: 
+  questions:
+  - "Soru 1 (Demirci)\t1"
+  - "Soru 2 (Demirci)\t1"
+  - Soru 3 (Demirci) 1
+  answers:
+  - Cevap 1 (Demirci) 1
+  - Cevap 2 (Demirci) 1
+  - Cevap 3 (Demirci) 1
+  characterType: 5

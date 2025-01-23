@@ -26,6 +26,7 @@ public class MapInteraction : MonoBehaviour
 
     private void Awake()
     {
+        _isEnabled = true;
         mapPopup.gameObject.SetActive(false);   
         
     }
@@ -52,7 +53,7 @@ public class MapInteraction : MonoBehaviour
             {
                 interactionText.text = "Press " + "[" + interactionKey + "]";
                 interactionText.gameObject.SetActive(true);
-                interactionText.transform.position = hit.point + new Vector3(0, 0, .1f);
+                interactionText.transform.position = hit.point + new Vector3(0, 0, .3f);
                 if (Input.GetKeyDown(interactionKey))
                 {
                     mapObjects.Add(hit.transform.gameObject);

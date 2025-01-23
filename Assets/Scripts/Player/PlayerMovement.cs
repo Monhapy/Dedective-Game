@@ -13,8 +13,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float verticalLookMaxValue = 90f;
     [SerializeField] private GameObject cameraPivot;
     [SerializeField] private float cameraDamping = 10;
-    [Header("Jump Variables")] 
-    [SerializeField] private float jumpHeight = 3;
     [SerializeField] private float fallMultiplier = 2.5f;
     [Header("Sprint Variables")]
     [SerializeField] private float sprintSpeed = 25f;
@@ -47,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         Move();
-        Jump();
+        Gravity();
         Sprint();
     }
 
@@ -82,14 +80,10 @@ public class PlayerMovement : MonoBehaviour
 
         _characterController.Move(_velocity * Time.deltaTime);
     }
-
-    private void Jump()
+    private void Gravity()
     {
-        if (_characterController.isGrounded && Input.GetKey(KeyCode.Space))
-        {
-            _velocity.y = jumpHeight;
-        }
-        else if (!_characterController.isGrounded || Input.GetKeyUp(KeyCode.Space))
+       
+        if (!_characterController.isGrounded)
         {
             _velocity.y += Physics.gravity.y * fallMultiplier * Time.deltaTime;
         }

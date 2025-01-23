@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1863a4c661b547458af1eeff2ee91e6, type: 3}
+  m_Name: Rahip_Stage2
+  m_EditorClassIdentifier: 
+  questions:
+  - "Zengin bir adam evinde \xF6l\xFC bulunmu\u015F. Hizmet\xE7i, \u2018Sabah camlar\u0131
+    temizlerken adam\u0131 \xF6l\xFC buldum.\u2019 dedi. Polis onu tutuklad\u0131,
+    sence neden?"
+  - "Bir kad\u0131n y\xFCr\xFCrken bir otob\xFCs aniden duruyor ve kad\u0131n ko\u015Fmaya
+    ba\u015Fl\u0131yor. Bunu neden yapm\u0131\u015F olabilir?"
+  - "Bir cinayet i\u015Flenmi\u015F, dedektif maktul\xFCn \xE7ay barda\u011F\u0131n\u0131
+    inceledi. \xC7ay\u0131n i\xE7inde buzlar erimi\u015F ama \xE7ay\u0131n s\u0131cakl\u0131\u011F\u0131
+    normal. Ne d\xFC\u015F\xFCn\xFCyorsun?"
+  answers:
+  - "\xC7\xFCnk\xFC o camlar\u0131 i\xE7eriden temizleyemez! K\u0131\u015F\u0131n
+    d\u0131\u015F camlar\u0131 i\xE7erden temizleyemezsin. Yani yalan s\xF6yl\xFCyordur,
+    bir \u015Feyler var!"
+  - "Bence o otob\xFCs bir hapishane otob\xFCs\xFCyd\xFC ve kad\u0131n ka\xE7an mahkumu
+    g\xF6rd\xFC. O y\xFCzden aniden ko\u015Ftu."
+  - "Bu \u015Fu demek: \xC7ay, bir s\xFCre \xF6nce yap\u0131lm\u0131\u015F. Buzlar
+    erimi\u015F ama \xE7ay hala s\u0131cak kalm\u0131\u015F. Yani \xF6l\xFCm sabah
+    olmu\u015F olabilir."
+  characterType: 0

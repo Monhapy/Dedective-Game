@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9886b393bca68e14590af9b28afe285e, type: 3}
+  m_Name: Manav_Stage1
+  m_EditorClassIdentifier: 
+  questions:
+  - "Soru 1: Bu i\u015Fte yeni misiniz?"
+  - "Soru 2: En sevdi\u011Finiz meyve hangisi?"
+  - 'Soru 3: Sebzeleri taze tutmak zor mu?'
+  answers:
+  - "Cevap 1: Evet, meyve ve sebzeleri tan\u0131maya \xE7al\u0131\u015F\u0131yorum."
+  - "Cevap 2: \xC7ilek, \xE7\xFCnk\xFC \xE7ok tatl\u0131 ve lezzetli."
+  - "Cevap 3: \u0130lk ba\u015Fta zor geliyor ama do\u011Fru saklama y\xF6ntemlerini
+    \xF6\u011Frendim."
+  characterTypeHandler: 4

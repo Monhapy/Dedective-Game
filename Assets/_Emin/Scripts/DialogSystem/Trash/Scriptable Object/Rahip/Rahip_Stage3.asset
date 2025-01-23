@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1863a4c661b547458af1eeff2ee91e6, type: 3}
+  m_Name: Rahip_Stage3
+  m_EditorClassIdentifier: 
+  questions:
+  - "Bir adam \xF6ld\xFCr\xFClm\xFC\u015F, salonda gaz lambas\u0131 d\xFC\u015Fm\xFC\u015F
+    ama cam hala s\u0131cak. Ama lamba yanm\u0131yor. Ne olabilir?"
+  - "Bir adam her sabah asans\xF6rle zemin kata iniyor ama geri d\xF6nerken asans\xF6r\xFCn
+    yaln\u0131zca yar\u0131s\u0131na kadar \xE7\u0131k\u0131p, merdivenleri kullan\u0131yor.
+    Neden?"
+  - "Bir kad\u0131n kafede \xE7antas\u0131n\u0131 b\u0131rak\u0131p i\xE7ecek almak
+    i\xE7in kalk\u0131yor. D\xF6nd\xFC\u011F\xFCnde bir adam \xE7antas\u0131n\u0131n
+    yan\u0131nda oturuyor. \xC7antay\u0131 al\u0131p gitmi\u015F. Kad\u0131n neden
+    polisi \xE7a\u011F\u0131rm\u0131\u015F olabilir?"
+  answers:
+  - "Olamaz! Bu durumda lamba cinayet s\u0131ras\u0131nda yanm\u0131\u015F ve sonra
+    d\xFC\u015F\xFCp s\xF6nm\xFC\u015F. Cam\u0131n s\u0131cak olmas\u0131 da bu y\xFCzden."
+  - "\xC7\xFCnk\xFC o adam bir c\xFCce! Asans\xF6rdeki d\xFC\u011Fmelere yeti\u015Femedi\u011Fi
+    i\xE7in yar\u0131s\u0131na kadar gidiyor, sonra merdivenleri kullan\u0131yor."
+  - "\xC7\xFCnk\xFC adam \xE7antay\u0131 \xE7ok kolay a\xE7t\u0131 ve i\xE7indeki
+    do\u011Fru e\u015Fyalar\u0131 ald\u0131. \xC7anta onun olamaz! Hemen \u015F\xFCphelenmi\u015F
+    ve polisi \xE7a\u011F\u0131rm\u0131\u015F."
+  characterType: 0
