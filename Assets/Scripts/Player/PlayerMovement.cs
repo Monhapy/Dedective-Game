@@ -4,12 +4,12 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Movement Variables")] 
-    [SerializeField] private float movementSpeed = 15;
+    [SerializeField] public float movementSpeed = 15;
     [SerializeField] private float movementDeceleration = 5;
     [SerializeField] private float movementAcceleration = 1.5f;
     [SerializeField] private float velocityMaxValue = 10;
     [Header("Camera Variables")] 
-    [SerializeField] private float mouseSensitivity = 3;
+    [SerializeField] public float mouseSensitivity = 3;
     [SerializeField] private float verticalLookMaxValue = 90f;
     [SerializeField] private GameObject cameraPivot;
     [SerializeField] private float cameraDamping = 10;
